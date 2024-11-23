@@ -1,0 +1,17 @@
+<?php
+	if($req[0] == 'addevent'){
+		$response = $admin->AddEvent($data_input);
+        echo json_encode($response);
+	}
+
+    if ($req[0] == 'updateevent') {
+        $id = $req[1] ?? null; // Extract the event ID from the URL
+        if (!$id) {
+            echo json_encode(["error" => "Event ID is required"]);
+            return;
+        }
+    
+        $response = $admin->UpdateEvent($id, $data_input);
+        echo json_encode($response);
+    }
+    
