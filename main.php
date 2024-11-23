@@ -26,7 +26,7 @@ set_time_limit(1000);
 // Directory of files
 $rootPath = $_SERVER["DOCUMENT_ROOT"];
 // CHANGE ACCORDING TO WHERE THE BACKEND FOLDER IS LOCATED IN htdocs!
-$apiPath = $rootPath . "/FlexFam_Eventify/Event Management System/Backend/";
+$apiPath = $rootPath . "/eventify/backend";
 
 // connects the database
 require_once($apiPath . '/configs/dbconn.php');
